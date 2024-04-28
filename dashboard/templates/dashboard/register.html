@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+<!--  -->
+
+{% block title %} Register {% endblock title %}
+
+<!--  -->
+
+<!--  -->
+
+{% block content %}
+
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h3>Sign Up</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="login py-5 border-top-1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-8 align-item-center">
+                <div class="border border">
+                    <form method="POST" novalidate>
+                        {% csrf_token %}
+
+                        <fieldset class="p-4">
+                            {% for fm in form %}
+                            <!---->
+                            {{ fm.label_tag }} {{ fm }}
+                            <!---->
+                            <span class="my-custom-form-error-style">{{ fm.errors|striptags }}</span>
+                            {% endfor %}
+
+                            <button type="submit" class="btn btn-primary font-weight-bold mt-3">Register Now</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
+
+<!-- SECTION -->

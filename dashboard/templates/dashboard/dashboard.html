@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+<!--  -->
+
+{% load static %}
+
+<!--  -->
+
+{% block title %} Dashboard {% endblock title %}
+
+<!--  -->
+
+<!--  -->
+
+{% block content %}
+
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h3>Dashboard</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION -->
+
+<section class="dashboard section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="widget user-dashboard-profile">
+                        <div class="profile-thumb">
+                            <img src="{% static "images/person.jpg" %}" alt="" class="rounded-circle" />
+                        </div>
+
+                        <h5 class="text-center">{{ user.first_name }} {{ user.last_name }}</h5>
+                    </div>
+
+                    <div class="widget user-dashboard-menu">
+                        <ul>
+                            <li
+                            {% if request.path ==  "/auth/dashboard/" %}
+                                class="active"
+                            {% endif %}
+                            >
+                                <a href="{% url "dashboard" %}"><i class="fa fa-user"></i>Profile</a>
+                            </li>
+
+                            <li
+                            {% if request.path ==  "/auth/applied-loan/" %}
+                                class="active"
+                            {% endif %}
+                            >
+                                <a href="{% url "applied_loan" %}"
+                                    ><i class="fa fa-bookmark-o"></i>Loan Applied</span></a
+                                >
+                            </li>
+
+                            <li>
+                                <a href="{% url "loan_application" %}"
+                                    ><i class="fa fa-file-archive-o"></i>Apply Loan</span></a
+                                >
+                            </li>
+
+                            <li>
+                                <a href="{% url "logout" %}"><i class="fa fa-cog"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <!-- Recently Favorited -->
+                <div class="widget dashboard-container my-adslist p-2">
+                    <h3 class="widget-header">Profile</h3>
+
+                    <ul>
+                        <li style="font-size: 16px;" class="mb-3"><strong>USERNAME:</strong>   {{ user.username }}</li>
+                        <li style="font-size: 16px;" class="mb-3"><strong>FIRST NAME:</strong>   {{ user.first_name }}</li>
+                        <li style="font-size: 16px;" class="mb-3"><strong>LAST NAME:</strong> {{ user.last_name }}</li>
+                        <li style="font-size: 16px;" class="mb-3"><strong>EMAIL ADDRESS:</strong> {{ user.email }}</li>
+                        <li style="font-size: 16px;" class="mb-3"><strong>JOINED DATE:</strong> {{ user.date_joined }}</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- Container End -->
+</section>
+
+<!-- SECTION -->
+
+{% endblock content %}
+
+<!--  -->

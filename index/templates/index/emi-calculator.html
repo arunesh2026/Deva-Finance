@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+<!--  -->
+
+{% load static %}
+
+<!--  -->
+
+{% block title %} EMI Calculator {% endblock title %}
+
+<!--  -->
+
+{% block style_css_link %}
+<link rel="stylesheet" href="{% static "index/css/style.css" %}">
+{% endblock style_css_link %}
+
+<!--  -->
+
+{% block content %}
+
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h3>EMI Calculator</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="loan-calculator">
+    <div class="top">
+
+        <form action="#">
+            <div class="group">
+                <div class="title">Amount</div>
+                <input type="number" value="100000" class="loan-amount" />
+            </div>
+
+            <div class="group">
+                <div class="title">Interest Rate</div>
+                <input type="number" value="8.5" class="interest-rate" />
+            </div>
+
+            <div class="group">
+                <div class="title">Tenure (in months)</div>
+                <input type="number" value="36" class="loan-tenure" />
+            </div>
+        </form>
+    </div>
+
+    <div class="result">
+        <div class="left">
+            <div class="loan-emi mb-3">
+                <h3>Loan EMI</h3>
+                <div class="value">123</div>
+            </div>
+
+            <div class="total-interest mb-3">
+                <h3>Total Interest Payable</h3>
+                <div class="value">1234</div>
+            </div>
+
+            <div class="total-amount">
+                <h3>Total Amount</h3>
+                <div class="value">12345</div>
+            </div>
+
+
+            <button class="btn btn-primary mt-4 calculate-btn">Calculate</button>
+        </div>
+
+        <div class="right pb-5 pt-4">
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="{% url "loan_application" %}"  class="btn btn-success mt-4 mb-4 calculate-btn">Apply Loan</a>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+
+<script src="{% static "index/js/script.js" %}"></script>
+
+
+
+{% endblock content %}
+
+<!--  -->

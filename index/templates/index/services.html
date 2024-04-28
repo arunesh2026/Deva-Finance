@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+<!--  -->
+{% load static %}
+<!--  -->
+
+{% block title %} Services {% endblock title %}
+
+<!--  -->
+
+{% block content %}
+
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h3>Our Services</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section pt-5">
+    <div class="container">
+        <!-- NOTE   -   card start  -->
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{% static "images/personal-loan.png" %}" class="img-fluid rounded-start" style="height: 100%" alt="..." />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title" style="font-size: 32px">Personal Loan</h2>
+                        <p class="card-text mt-2" style="font-size: 18px">
+                           A personal loan is an amount of money you can borrow to use for a variety of purposes. For instance, you may use a personal loan to consolidate debt, pay for home renovations, or plan a dream wedding. Personal loans can be offered by banks, credit unions, or online lenders. The money you borrow must be repaid over time, typically with interest. Some lenders may also charge fees for personal loans.
+                        </p>
+
+                        <a href="{% url "loan_application" %}" class="btn btn-primary mt-2">Apply Loan</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---->
+
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{% static "images/instant-loan.jpg" %}" class="img-fluid rounded-start" style="height: 100%"  alt="..." />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title" style="font-size: 32px">Instant Loan</h2>
+                        <p class="card-text mt-2" style="font-size: 18px">
+                            Instant loans are usually personal loans that are taken for a short period of time. Instant loans can be availed quickly and seamlessly as it does not require a high credit score. People often choose instant loans in emergency situations that require instant money. However, there is a major drawback of an instant personal loan, and that is the high rate of interest that needs to be paid.
+                        </p>
+
+                        <a href="{% url "loan_application" %}" class="btn btn-primary mt-2">Apply Loan</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---->
+
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{% static "images/student-loan.png" %}" class="img-fluid rounded-start" style="height: 100%" alt="..." />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title" style="font-size: 32px">Student Loan</h2>
+                        <p class="card-text mt-2" style="font-size: 18px">
+                            A student loan is a lump sum of money that a student receives from the federal government, their state government, or a private company, which they can use toward tuition or other school expenses. However, they must pay that money back on time, plus interest.
+                        </p>
+
+                        <a href="{% url "student_loan" %}" class="btn btn-primary mt-2">Apply Loan</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---->
+
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{% static "images/business-loan.jpg" %}" class="img-fluid rounded-start" style="height: 100%" alt="..." />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title" style="font-size: 32px">Business Loan</h2>
+                        <p class="card-text mt-2" style="font-size: 18px">
+                            The business loan meaning is a loan product offered to business owners who have a running company but require external funds for operations. The investment cover expenses such as employee salaries, rent, buying equipment, or expanding the business in other cities. </br> Lenders analyze the business owner's creditworthiness through factors such as credit score and business turnover. However, entrepreneurs or business owners are legally bound to use the loan amount only to cover business expenses and not use the loan amount to cover personal expenditures.</br>Repayment is also a factor in the business loan definition, as the lenders charge interest on the principal amount the borrower must repay in full within the loan tenure.
+                        </p>
+
+                        <a href="{% url "loan_application" %}" class="btn btn-primary mt-2">Apply Loan</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---->
+
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{% static "images/marriage-loan.jpg" %}" class="img-fluid rounded-start" style="height: 100%" alt="..." />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title" style="font-size: 32px">Marriage Loan</h2>
+                        <p class="card-text mt-2" style="font-size: 18px">
+                            A Marriage Loan, also known as a wedding loan, is a type of personal loan designed to provide financial assistance to individuals who require funds to cover the expenses associated with weddings.
+                        </p>
+
+                        <a href="{% url "loan_application" %}" class="btn btn-primary mt-2">Apply Loan</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>      
+
+        <!---->
+
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{% static "images/education-loan.jpg" %}" class="img-fluid rounded-start" style="height: 100%" alt="..." />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title" style="font-size: 32px">Education Loan</h2>
+                        <p class="card-text mt-2" style="font-size: 18px">
+                            An education loan is a sum of money borrowed to finance post-secondary education or higher education-related expenses. Education loans are intended to cover the cost of tuition, books and supplies, and living expenses while the borrower is in the process of pursuing a degree. Payments are often deferred while students are in college and, depending on the lender, for an additional six-month period after earning a degree. This deferment period is also referred to as a "grace period."
+                        </p>
+
+                        <a href="{% url "loan_application" %}" class="btn btn-primary mt-2">Apply Loan</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---->
+
+        <!-- NOTE   -   card start  -->
+    </div>
+</section>
+
+{% endblock content %}

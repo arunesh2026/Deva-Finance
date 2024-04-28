@@ -1,0 +1,495 @@
+hr {
+    height: 1px;
+    background-color: #aaa;
+}
+
+.loan-calculator {
+    font-family: "Roboto", sans-serif;
+    width: 60%;
+    margin: 24px auto;
+    background: #fff;
+    box-shadow: 0 12px 50px -11px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: #14213d;
+    overflow: hidden;
+}
+
+.loan-calculator,
+.loan-calculator * {
+    box-sizing: border-box;
+}
+
+.loan-calculator .top {
+    background: #222;
+    color: #fff;
+    padding: 32px;
+}
+
+.loan-calculator .top h2 {
+    margin-top: 0;
+}
+
+.loan-calculator form {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.loan-calculator .title {
+    margin-bottom: 16px;
+}
+
+.loan-calculator form input {
+    font-size: 20px;
+    padding: 8px 24px;
+    width: 100%;
+}
+
+.loan-calculator .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loan-calculator .result .left {
+    width: 50%;
+    padding: 8px 32px;
+}
+
+.loan-calculator .left h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.loan-calculator .result .value {
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(20, 33, 61, 0.2);
+}
+
+.loan-calculator .result .value::before {
+    content: "₹";
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 6px;
+    opacity: 0.4;
+}
+
+.loan-calculator .right {
+    width: 50%;
+}
+
+@media (max-width: 650px) {
+    .loan-calculator {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .loan-calculator form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .loan-calculator .result {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .loan-calculator .result .left {
+        width: 100%;
+    }
+
+    .loan-calculator .right {
+        width: 100%;
+    }
+
+    .loan-emi {
+        margin-top: 18px;
+    }
+}
+
+/* SECTION  -       hero section style */
+
+.my-hero-section {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("/static/images/home-top.jpg");
+    height: 610px;
+    width: 100%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    text-align: center;
+    /* margin-top: ; */
+}
+
+.my-hero-section div {
+    margin-left: 35%;
+    padding-top: 10%;
+}
+
+.my-hero-section div h1 {
+    color: orangered;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.my-hero-section div p {
+    color: #eee;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@media (max-width: 650px) {
+    .my-hero-section {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/static/images/home-top.jpg");
+
+        height: 350px;
+
+        background-position: left;
+        background-size: cover;
+    }
+
+    .my-hero-section div {
+        margin-left: auto;
+        padding-top: auto;
+    }
+
+    .my-hero-section div h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* SECTION  -       why me */
+.why-me {
+    margin: 5rem 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+
+    background-color: #eee;
+    padding: 1rem;
+}
+
+.why-me__right {
+    padding: 2rem 0;
+    padding-right: 2rem;
+}
+
+.why-me__right h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.why-me__right p {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.why-me__right ul li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 650px) {
+    .why-me {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        /* margin: 2rem 0;
+    padding: 1rem; */
+    }
+
+    .why-me__left img {
+        width: 100%;
+    }
+
+    .why-me__right {
+        padding: 2rem 0;
+        width: 100%;
+    }
+
+    .why-me__right h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* SECTION */
+
+.loan-partner {
+    width: 80%;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.loan-partner h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 2.4rem;
+}
+
+.loan-partner div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+
+    justify-items: center;
+}
+
+.loan-partner div img {
+    width: 150px;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+@media (max-width: 650px) {
+    .loan-partner {
+        margin: 4rem 1rem;
+    }
+
+    .loan-partner h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .loan-partner div {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* SECTION */
+
+.happy-customers {
+    width: 80%;
+    margin: 6rem auto 0;
+    padding-bottom: 5rem;
+}
+
+.happy-customers h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.happy-customers__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.happy-customers__container__card {
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.happy-customers__container__card img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 50%;
+}
+
+.happy-customers__container__card h3 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.happy-customers__container__card p {
+    font-size: 16px;
+}
+
+.my-rating {
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .happy-customers {
+        margin: auto;
+        margin-top: 5rem;
+    }
+
+    .happy-customers h2 {
+        font-size: 2.2rem;
+    }
+
+    .happy-customers__container {
+        grid-template-columns: repeat(1, 1fr);
+
+        justify-items: center;
+    }
+
+    .happy-customers__container__card {
+        background-color: #eee;
+        padding: 1rem;
+        border-radius: 1rem;
+
+        align-items: center;
+    }
+
+    .happy-customers__container__card h3 {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .happy-customers__container__card p {
+        font-size: 16px;
+    }
+}
+
+/* SECTION :        emi calculator       */
+
+.my-emi_calculator {
+    margin: 5rem 0;
+}
+
+.my-emi_calculator h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+@media (max-width: 650px) {
+    .my-emi_calculator h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* SECTION :        consultation */
+
+.consultation {
+    width: 70%;
+    margin: 5rem auto;
+}
+
+.consultation__text {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.consultation__text h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.consultation__text p {
+    font-size: 18px;
+}
+
+.consultation__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.consultation__content__card {
+    box-shadow: 0px 0px 2px 2px #ccc;
+    border-radius: 1rem;
+}
+
+.consultation__content__card img {
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.consultation__content__card__text {
+    padding: 2rem 1rem;
+}
+
+.consultation__content__card__text h3 {
+    font-size: 1.8rem;
+}
+
+.consultation__content__card__text p {
+    font-size: 16px;
+    margin: 1rem 0;
+}
+
+@media (max-width: 650px) {
+    .consultation {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .consultation__text {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+
+    .consultation__text h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .consultation__text p {
+        font-size: 18=6px;
+    }
+
+    .consultation__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .consultation__content__card {
+        box-shadow: 0px 0px 2px 2px #ccc;
+        border-radius: 1rem;
+    }
+}
+
+/* SECTION :        income based loan         */
+
+.income_based_loan {
+    width: 70%;
+    margin: 4rem auto;
+}
+
+.income_based_loan h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+    text-decoration: underline;
+}
+
+.table {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media (max-width: 650px) {
+    .income_based_loan {
+        width: 100%;
+        margin: 4rem 0;
+    }
+
+    .income_based_loan h2 {
+        padding: 4px;
+        font-size: 1.8rem;
+    }
+
+    .table {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}

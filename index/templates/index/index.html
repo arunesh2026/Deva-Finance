@@ -1,0 +1,318 @@
+{% extends "base.html" %}
+
+<!--  -->
+
+{% load static %}
+
+<!--  -->
+
+{% block title %} Home | Deva Finance - Get Loan Easily and Fast. {% endblock title %}
+
+<!--  -->
+
+{% block style_css_link %} <link rel="stylesheet" href="{% static "index/css/style.css" %}"> {% endblock style_css_link %}
+
+<!--  -->
+
+<!--  -->
+
+{% block content %}
+
+<!-- SECTION :      hero     -->
+
+<div class="my-hero-section">
+    <div>
+        <h1>Deva Finance hai toh</br>LOAN lena EASY hai.</h1>
+
+        <p>Professional Consultation | On-Call Assistance | High-Quality Services</p>
+
+        <p>Get Loan Upto 25 lakhs</p>
+
+        <a href="{% url "loan_application" %}" class="btn btn-primary mt-4">Apply Loan</a>
+    </div>
+</div>
+
+<!-- SECTION :      consultation       -->
+
+<section class="loan_note">
+    <div class="loan_note__content">
+        <h2>Important Information</h2>
+        <p>We have Disbursed till now more than 17,000+ loan disbursed and 23+ Cr amount disbursed. We are giving loan based on income only we don't see you'r CIBIL score and anything else.</p>
+        <p>If you'r looking for loan fast and without CIBIL score then you are at right place.</p>
+        <p>Once you apply for loan our team will contact you for helping to get loan.</p>
+    </div>
+</section>
+
+<!-- SECTION :      consultation       -->
+
+<section class="consultation">
+    <div class="consultation__text">
+        <h2>Our Excellent Range of Industry-Best Consultation</h2>
+        <p>We've been offering highly beneficial financial consultation and service provisions to people and helping them fulfil their financial pursuits. With our quick and easily accessible consultation and services, we aim to aid your monetary aspects and support you in achieving your dreams.</p>
+    </div>
+
+    <div class="consultation__content">
+        <div class="consultation__content__card">
+            <img src="{% static "images/person-1.jpg" %}" alt="">
+
+            <div class="consultation__content__card__text">
+                <h3>Business Financial Consultation</h3>
+                <p>Boost Your Organizational Finances With Expert Business Financial Consultation</p>
+                <a href="{% url "loan_application" %}" class="btn btn-primary">Apply Now</a>
+            </div>
+        </div>
+
+        <div class="consultation__content__card">
+            <img src="{% static "images/person-2.jpg" %}" alt="">
+
+            <div class="consultation__content__card__text">
+                <h3>Personal Financial Consultation</h3>
+                <p>Effective & Futuristic Financial Consultation – Better Planning Always Works!</p>
+                <a href="{% url "loan_application" %}" class="btn btn-primary">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- SECTION :      emi calculator       -->
+
+<section class="my-emi_calculator">
+
+    <h2>EMI Calculator</h2>
+
+    <div class="loan-calculator">
+        <div class="top">
+
+            <form action="#">
+                <div class="group">
+                    <div class="title">Amount</div>
+                    <input type="number" value="100000" class="loan-amount" />
+                </div>
+
+                <div class="group">
+                    <div class="title">Interest Rate</div>
+                    <input type="number" value="8.5" class="interest-rate" />
+                </div>
+
+                <div class="group">
+                    <div class="title">Tenure (in months)</div>
+                    <input type="number" value="36" class="loan-tenure" />
+                </div>
+            </form>
+        </div>
+
+        <div class="result">
+            <div class="left">
+                <div class="loan-emi mb-3">
+                    <h3>Loan EMI</h3>
+                    <div class="value">123</div>
+                </div>
+
+                <div class="total-interest mb-3">
+                    <h3>Total Interest Payable</h3>
+                    <div class="value">1234</div>
+                </div>
+
+                <div class="total-amount">
+                    <h3>Total Amount</h3>
+                    <div class="value">12345</div>
+                </div>
+
+
+                <button class="btn btn-primary mt-4 calculate-btn">Calculate</button>
+            </div>
+
+            <div class="right pb-5 pt-4">
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<hr>
+
+<!-- SECTION :      why deva finance  -->
+
+<div class="why-me">
+    <div class="why-me__left">
+        <img src="{% static "images/student-loan.png" %}" alt="">
+    </div>
+
+    <div  class="why-me__right">
+        <h2>Why Deva Finance?</h2>
+
+        <p>Being one of the most appreciated and praised financial consultation and service providers, DevaFinance boasts of serving a huge number of customers in the most satisfied and professional manner. The company has garnered a great volume of acclaim due to its authentic services in giving industry-acing guidance.</p>
+
+        <ul>
+            <li>✔️ 17,000+ Satisfied Customers</li>
+            <li>✔️ 100% Online Process</li>
+            <li>✔️ Consultation by Acclaimed Experts</li>
+            <li>✔️ On-Call Assistance</li>
+            <li>✔️ Partnered With Multiple Lending</li>
+            <li>✔️ Free Expert Consultancy</li>
+            <li>✔️ Minimum Documents</li>
+        </ul>
+
+        <a href="#" class="btn btn-primary mt-4">Apply Now</a>
+    </div>
+</div>
+
+<hr>
+
+<!-- SECTION :      our loan partner        -->
+
+{% comment %} <section class="loan-partner">
+    <h2>Our Leading NBFCs Partneared</h2>
+
+    <div>
+        <img src="{% static "images/partner/1.png" %}" alt="">
+        <img src="{% static "images/partner/2.png" %}" alt="">
+        <img src="{% static "images/partner/4.png" %}" alt="">
+        <img src="{% static "images/partner/5.png" %}" alt="">
+        <img src="{% static "images/partner/6.png" %}" alt="">
+        <img src="{% static "images/partner/7.jpeg" %}" alt="">
+        <img src="{% static "images/partner/8.png" %}" alt="">
+        <img src="{% static "images/partner/9.png" %}" alt="">
+        <img src="{% static "images/partner/10.png" %}" alt="">
+        <img src="{% static "images/partner/11.png" %}" alt="">
+    </div>
+</section>
+
+<hr> {% endcomment %}
+
+<!-- SECTION :      happy customers          -->
+
+<section class="happy-customers">
+    <h2>Over 17,000+ Happy Customers</h2>
+
+    <div class="happy-customers__container">
+        <div class="happy-customers__container__card">
+            <img src="{% static "images/customers/5.jpg" %}" alt="">
+            <h3>Rahul Singh Rajpoot</h3>
+            <p class="my-rating">⭐⭐⭐⭐⭐</p>
+            <p>I’m much thankful for your quick support in getting an instant personal loan. I highly recommend Deva Finance for loans.</p>
+        </div>
+
+        <div class="happy-customers__container__card">
+            <img src="{% static "images/customers/1.jpg" %}" alt="">
+            <h3>Neha Singh</h3>
+            <p class="my-rating">⭐⭐⭐⭐⭐</p>
+            <p>I want to thank Deva Finance, due to which I got quick approval for a personal loan within a day.</p>
+        </div>
+
+        <div class="happy-customers__container__card">
+            <img src="{% static "images/customers/3.jpg" %}" alt="">
+            <h3>Nikhit Gowda</h3>
+            <p class="my-rating">⭐⭐⭐⭐⭐</p>
+            <p>Deva Finance is one of the best trusted multiple bank loan service providers to assist with loans through membership. They have provided me with a great earning opportunity to become a Loan DSA.</p>
+        </div>
+
+        <div class="happy-customers__container__card">
+            <img src="{% static "images/customers/4.jpg" %}" alt="">
+            <h3>Amir Islam</h3>
+            <p class="my-rating">⭐⭐⭐⭐⭐</p>
+            <p>I really liked the concept and work, These guys are providing great assistance on how one can get an approval for any loan. I’m happy to have your service.</p>
+        </div>
+    </div>
+</section>
+
+
+<hr>
+
+
+<!-- SECTION :      income based loan        -->
+
+<section class="income_based_loan">
+    <h2>Maximum Loan Amount for Different Income's as per Multiplier Method</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Monthly Salary</th>
+            <th scope="col">Maximum Loan Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rs. 15,000</td>
+                <td>Rs. 2.25 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 20,000</td>
+                <td>Rs. 3.00 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 25,000</td>
+                <td>Rs. 3.75 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 30,000</td>
+                <td>Rs. 4.50 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 35,000</td>
+                <td>Rs. 5.25 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 40,000</td>
+                <td>Rs. 6.00 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 45,000</td>
+                <td>Rs. 6.75 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 50,000</td>
+                <td>Rs. 7.50 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 60,000</td>
+                <td>Rs. 9.00 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 70,000</td>
+                <td>Rs. 10.50 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 80,000</td>
+                <td>Rs. 12.00 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 90,000</td>
+                <td>Rs. 13.50 Lakh</td>
+            </tr>
+
+            <tr>
+                <td>Rs. 1,00,000</td>
+                <td>Rs. 15.00 Lakh</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</section>
+
+
+<!-- SECTION :      link        -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+
+<script src="{% static "index/js/script.js" %}"></script>
+
+{% endblock content %}
+
+<!--  -->

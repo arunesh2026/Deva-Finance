@@ -1,0 +1,93 @@
+{% load static %}
+
+<footer class="footer section section-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-md-3 col-6 mb-4 mb-lg-0">
+                <div class="block">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="{% url "services" %}">Services</a></li>
+                        <li><a href="{% url "contact_us" %}">Contact Us</a></li>
+                        <li><a href="{% url "about" %}">About Us</a></li>
+                        <li><a href="{% url "services" %}">Features</a></li>
+                        <li><a href="{% url "privacy_policy" %}">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 offset-lg-1 col-md-3 col-6 mb-4 mb-lg-0">
+                <div class="block">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="{% url "loan_application" %}">Personal Loan</a></li>
+                        <li><a href="{% url "loan_application" %}">Instant Loan</a></li>
+                        <li><a href="{% url "student_loan" %}">Student Loan</a></li>
+                        <li><a href="{% url "loan_application" %}">Business Loan</a></li>
+                        <li><a href="{% url "loan_application" %}">Marriage Loan</a></li>
+                        <li><a href="{% url "loan_application" %}">Education Loan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 offset-lg-1 col-md-3 col-6 mb-4 mb-lg-0">
+                <div class="block">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="{% url "emi_calculator" %}">EMI Calculator</a></li>
+                        <li><a href="{% url "contact_us" %}">Customer Care</a></li>
+                        <li><a href="{% url "safety_guide" %}">Safety Guide</a></li>
+                        <li><a href="{% url "faq_view" %}">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-3 offset-md-1 offset-lg-0 col-6 mb-4 mb-md-0">
+                <div class="block">
+                    <h4>Address</h4>
+                    <ul>
+                        <li style="color: #bbb">
+                            10th Cross Road Aswath Aagar Marathahalli, Bangalore, Karnataka 560037.
+                        </li>
+                        <li style="color: #bbb">+91 8951618410</li>
+                        <li style="color: #bbb;font-size: 13px;">contact@devafinance.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Footer Bottom -->
+<footer class="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 text-center text-lg-left mb-3 mb-lg-0">
+                <div class="copyright">
+                    <p>
+                        Copyright &copy;
+                        <script>
+                            var CurrentYear = new Date().getFullYear();
+                            document.write(CurrentYear);
+                        </script>
+                        Deva Finance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <ul class="social-media-icons text-center text-lg-right">
+                    <li><a class="fa fa-facebook" href="#"></a></li>
+                    <li><a class="fa fa-twitter" href="#"></a></li>
+                    <li><a class="fa fa-pinterest-p" href="#"></a></li>
+                    <li><a class="fa fa-github-alt" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- To Top -->
+    <div class="scroll-top-to">
+        <i class="fa fa-angle-up"></i>
+    </div>
+</footer>

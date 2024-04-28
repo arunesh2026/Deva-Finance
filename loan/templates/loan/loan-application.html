@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+<!---->
+
+{% load static %}
+
+<!---->
+
+{% block title %} Loan Application Sent Successfully {% endblock title %}
+
+<!---->
+
+{% block content %}
+
+<!--        SECTION          -->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h3>Apply For Loan</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="student_loan_link">
+    <p>For Student Loan Click Here... <a href="{% url "student_loan" %}">Apply Now</a></p>
+</section>
+
+<section class="loan_note">
+    <div class="loan_note__content">
+        <h2>Important Information</h2>
+        <p>We have Disbursed till now more than 17,000+ loan's and 23+ Cr amount disbursed. We are giving loan based on income only we don't see you'r CIBIL score and anything else.</p>
+        <p>If you'r looking for loan fast and without CIBIL score then you are at right place.</p>
+        <p>Once you apply for loan our team will contact you for helping to get loan.</p>
+        <h3 style="text-align:center; font-size: 2rem">👇</h3>
+    </div>
+</section>
+
+<section class="advt-post bg-gray py-5">
+    <div class="container" style="width: 90%">
+        <form method="POST">
+            {% csrf_token %}
+
+            <!---->
+
+            {{ loan_form }}
+
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </form>
+    </div>
+</section>
+
+<section>
+    <h1>Add some</h1>
+</section>
+
+<!--        SECTION          -->
+
+{% endblock content %}

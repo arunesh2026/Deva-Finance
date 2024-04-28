@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+<!--  -->
+
+{% block title %} Login {% endblock title %}
+
+<!--  -->
+
+<!--  -->
+
+{% block content %}
+
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h3>Login</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  -->
+
+<section class="login py-5 border-top-1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-8 align-item-center">
+                <div class="border">
+                    <form action="" method="POST" novalidate>
+                        {% csrf_token %}
+
+                        <fieldset class="p-4">
+                            {% for fm in form %}
+                            <div>
+                                {{ fm.label_tag }} {{ fm }}
+                                <span class="my-custom-form-error-style">{{ fm.errors|striptags }}</span>
+                            </div>
+                            {% endfor %}
+
+                            <input type="submit" class="btn btn-primary font-weight-bold mt-3" value="Login" />
+                            <a class="mt-3 d-block text-primary" href="{% url "register" %}">Forget Password?</a>
+                            <a class="mt-3 d-inline-block text-primary" href="{% url "register" %}">Register Now</a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  -->
+
+{% endblock content %}
+
+<!--  -->

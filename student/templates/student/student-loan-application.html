@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+<!--  -->
+
+{% block title %} Student Loan Application {% endblock title %}
+
+<!--  -->
+
+<!--  -->
+
+{% block content %}
+
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h3>Student Loan Application</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="advt-post bg-gray py-5">
+    <div class="container" style="width: 90%">
+        <form method="POST">
+            {% csrf_token %}
+
+            <!---->
+
+            {{ form }}
+
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </form>
+    </div>
+</section>
+
+<!--  -->
+
+{% endblock content %}
